@@ -1,2 +1,2 @@
 # OpenInvoice2000
-A little PHP-Based tool to build invoices 
+A little PHP-Based tool for build invoices 
