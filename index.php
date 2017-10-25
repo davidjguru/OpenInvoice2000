@@ -1,4 +1,5 @@
 <?php
+// First, we're going to call the autoloader
 require_once("src/classes/Autoloader.php");
 session_start();
 
