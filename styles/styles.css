@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-sep-2017, 23:59:37
+    Author     : davidjguru
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-sep-2017, 0:05:49
+    Author     : davidjguru
+*/
+
+#frmLogin { 
+	padding: 20px 60px;
+	background: #B6E0FF;
+	color: #555;
+	display: inline-block;
+	border-radius: 4px; 
+}
+.field-group { 
+	margin:15px 0px; 
+}
+.input-field {
+	padding: 8px;width: 200px;
+	border: #A3C3E7 1px solid;
+	border-radius: 4px; 
+}
+.form-submit-button {
+	background: #65C370;
+	border: 0;
+	padding: 8px 20px;
+	border-radius: 4px;
+	color: #FFF;
+	text-transform: uppercase; 
+}
+.member-dashboard {
+	padding: 40px;
+	background: #D2EDD5;
+	color: #555;
+	border-radius: 4px;
+	display: inline-block;
+	text-align:center; 
+}
+.logout-button {
+	color: #09F;
+	text-decoration: none;
+	background: none;
+	border: none;
+	padding: 0px;
+	cursor: pointer;
+}
+.error-message {
+	text-align:center;
+	color:#FF0000;
+}
+.demo-content label{
+	width:auto;
+}
+
+body {
+	  background-color: #689F63;
+	}
+        
+        #head{
+            background-color: #689F63;
+            font-size: 50px;
+            font-family: 'Permanent Marker';
+            text-align: center;
+            color: white;
+            
+        }
+        #head-image{
+          text-align: center;
+            
+            
+        }
+        
+        #presentation{
+            background-color: #689F63;
+            height: 100%
+            
+        }
+        
+        #footer{
+            background-color: #FFFFFF;
+            font-size: 30px;
+            font-family: 'fantasy';
+            text-align: center;
+            align-items: center;
+            color: #689F63;
+            height: 100px;
+            
+            
+            
+        }
