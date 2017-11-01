@@ -18,6 +18,39 @@ require_once("src/classes/Autoloader.php");
 // Opening session
 session_start();
 
+// Creating a new connection to the database
+$conn = new SQLite3('database/openinvoice.db');
+$message="";
+
+// First, we're going to look for the login value
+if(!empty($_POST["login"])) {
+
+        $sql = 'SELECT * FROM users WHERE user = ? and password = ?';
+        $query = $conn->prepare($sql);
+        $query->bindParam('1', $_POST["user_name"]);
+        $query->bindParam('2', $_POST["password"]);
+        
+        $response = $query->execute();
+        $row = $response->fetchArray();
+        //$result = mysqli_query($conn,"SELECT * FROM users WHERE user = ? and password = ?';
+	//$row  = mysqli_fetch_array($result);
+	if(is_array($row)) {
+	$_SESSION["user_id"] = $row['userid'];
+        $_SESSION["user"] = $row['user'];
+	} else {
+	$message = LOGINERROR;
+	}
+}
+
+// And now asking about the logout value
+if(!empty($_POST["logout"])) {
+        
+        // If we're going out, we have to clear the session
+          $_SESSION= array();// Cleaning the session variable
+          session_unset();// Undefining the session variable
+          session_destroy();// And destroy the session
+}
+
 // Asking about language
 if (isset($_POST["language"])){
     
@@ -30,6 +63,8 @@ elseif (isset ($_SESSION["language"])) {
     
     $language = $_SESSION["language"];
     include ("i18n/$language.php");
+    
+    
 } else{
     
     // Here we can asign an idiom by default
@@ -58,37 +93,12 @@ elseif (isset ($_SESSION["language"])) {
             break;
     }
     
-    
 }
 
 
 
 
-$conn = new SQLite3('database/openinvoice.db');
-$message="";
 
-if(!empty($_POST["login"])) {
-
-        $sql = 'SELECT * FROM users WHERE user = ? and password = ?';
-        $query = $conn->prepare($sql);
-        $query->bindParam('1', $_POST["user_name"]);
-        $query->bindParam('2', $_POST["password"]);
-        
-        $response = $query->execute();
-        $row = $response->fetchArray();
-        //$result = mysqli_query($conn,"SELECT * FROM users WHERE user = ? and password = ?';
-	//$row  = mysqli_fetch_array($result);
-	if(is_array($row)) {
-	$_SESSION["user_id"] = $row['userid'];
-        $_SESSION["user"] = $row['user'];
-	} else {
-	$message = LOGINERROR;
-	}
-}
-if(!empty($_POST["logout"])) {
-	$_SESSION["user_id"] = "";
-	session_destroy();
-}
 ?>
 <html>
 <head>
@@ -121,7 +131,7 @@ if(!empty($_POST["logout"])) {
 //$result = mysqlI_query($conn,"SELECT * FROM users WHERE userid='" . $_SESSION["user_id"] . "'");
 //$row  = mysqli_fetch_array($result);
 ?>
-<form action="" method="post" id="frmLogout">
+<form action="index.php" method="post" id="frmLogout">
 <div class="member-dashboard"> 
     <?php echo WELCOME. ucwords($_SESSION['user']); ?><br>
     <?php echo LOGIN; ?><br><br>
@@ -134,16 +144,24 @@ if(!empty($_POST["logout"])) {
 <form name="i18nselector" method="post" action="index.php">
         
     <fieldset>
-            <legend>Seleccione idioma</legend>
+            <legend><?php echo LEGEND; ?></legend>
             <select name="language">
-                <option value="spanish">Castellano</option>
-                <option value="english">English</option>
+                <option value="<?php echo LANGVALUE1; ?>"><?php echo LANG1; ?></option>
+                <option value="<?php echo LANGVALUE2; ?>"><?php echo LANG2; ?></option>
             </select>
-            <input type="submit" value="Elegir" />
+            <input type="submit" value="<?php echo SELECTI18N; ?>" >
     </fieldset>
         
         
 </form>
+    
+    <h1><?php echo ACTIONSMENU; ?></h1>
+    <div id="actionsmenu">
+        
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
 </div>
 </div>
 </div>
