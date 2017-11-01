@@ -1,0 +1,15 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE invoice (id INTEGER PRIMARY KEY NOT NULL, clientname VARCHAR(30), clientNIF VARCHAR(30), clientAdress VARCHAR(255), date TEXT);
+INSERT INTO "invoice" VALUES(3,'Franco','CDFR3456','Calle Basura','1972');
+INSERT INTO "invoice" VALUES(7,NULL,NULL,NULL,'1998-05-23');
+INSERT INTO "invoice" VALUES(8,'David Rodriguez','BHR4562','Argantonio','1983');
+INSERT INTO "invoice" VALUES(12,'Pedro Port del Paramo','FRE452','Calle Mierda de la Seca','1994-05-23');
+INSERT INTO "invoice" VALUES(28,'PruebaUsuario','CIF123456','Calle del Test','2006-06-19');
+INSERT INTO "invoice" VALUES(273,'Javier Santaolalla','FREAK001','Calle Butifarra','1992-05-23');
+INSERT INTO "invoice" VALUES(274,NULL,NULL,NULL,NULL);
+CREATE TABLE users (userid INTEGER PRIMARY KEY ASC, user VARCHAR(30),  password VARCHAR(30), user_name VARCHAR(30), user_firstname VARCHAR(30), user_level INTEGER , user_adress VARCHAR(255), user_company VARCHAR (30), user_tlf VARCHAR (30));
+INSERT INTO "users" VALUES(1,'test','test','testname','testfirstname',1,'TestStreet','TestCompany','123456789');
+CREATE TABLE units (first_name text NOT NULL, last_name text NOT NULL, fiscal_number text NOT NULL, adress text NOT NULL);
+INSERT INTO "units" VALUES('John','Doe','1234567889B','Main Street number 67');
+COMMIT;
