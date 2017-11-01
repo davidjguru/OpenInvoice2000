@@ -19,5 +19,6 @@ define ("LANG2", "Inglés");
 define ("LANGVALUE1", "spanish");
 define ("LANGVALUE2", "english");
 define ("ACTIONSMENU", "¿Qué quieres hacer?");
-
+define ("ACTION1", "Crear una nueva unidad de trabajo");
+define ("ACTION2", "Crear una nueva factura");
 ?>

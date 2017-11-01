@@ -17,6 +17,10 @@ define ("LANG1", "English");
 define ("LANG2", "Spanish");
 define ("LANGVALUE1", "english");
 define ("LANGVALUE2", "spanish");
+
+// Actions from the user menu
 define ("ACTIONSMENU", "What do you wanna do?");
+define ("ACTION1", "Create a new business unit");
+define ("ACTION2", "Create a new invoice");
 
 ?>

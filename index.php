@@ -159,8 +159,8 @@ elseif (isset ($_SESSION["language"])) {
     <div id="actionsmenu">
         
         <ul>
-            <li></li>
-            <li></li>
+            <li><a href="action1.php"><?php echo ACTION1; ?></a></li>
+            <li><a href="action2.php"><?php echo ACTION2; ?></a></li>
         </ul>
 </div>
 </div>
