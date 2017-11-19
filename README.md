@@ -6,6 +6,10 @@
 A little PHP-Based tool for build invoices 
 
 ## Colors
+<p align="center">
+<img width="600" height="257" src="https://raw.githubusercontent.com/davidjguru/OpenInvoice2000/master/images/OpenInvoice2000_Colors_Palette.png">
+</p>
+
 The Colors Palette is based in the model "Storming Psychedelia" from http://www.colourlovers.com/palette/522000/Storming_Psychedelia
 
 ## Fonts
