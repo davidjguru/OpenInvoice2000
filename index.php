@@ -32,8 +32,7 @@ if(!empty($_POST["login"])) {
         
         $response = $query->execute();
         $row = $response->fetchArray();
-        //$result = mysqli_query($conn,"SELECT * FROM users WHERE user = ? and password = ?';
-	//$row  = mysqli_fetch_array($result);
+        
 	if(is_array($row)) {
 	$_SESSION["user_id"] = $row['userid'];
         $_SESSION["user"] = $row['user'];
@@ -74,7 +73,7 @@ elseif (isset ($_SESSION["language"])) {
     // Or ask to the browser about the language
     // and set the default, changing also
     // the value of the language variable session
-    // within $_SERVER
+    // within $_SESSION
     
     $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
     switch ($lang){
@@ -161,6 +160,8 @@ elseif (isset ($_SESSION["language"])) {
         <ul>
             <li><a href="action1.php"><?php echo ACTION1; ?></a></li>
             <li><a href="action2.php"><?php echo ACTION2; ?></a></li>
+            <li><a href="action3.php"><?php echo ACTION3; ?></a></li>
+            <li><a href="action4.php"><?php echo ACTION4; ?></a></li>
         </ul>
 </div>
 </div>

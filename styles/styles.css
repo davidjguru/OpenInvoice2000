@@ -25,6 +25,17 @@ and open the template in the editor.
 	display: inline-block;
 	border-radius: 4px; 
 }
+
+#frmBusinessUnit{
+    
+        padding: 20px 60px;
+	background: #B6E0FF;
+	color: #555;
+	display: inline-block;
+	border-radius: 4px; 
+    
+    
+}
 .field-group { 
 	margin:15px 0px; 
 }
