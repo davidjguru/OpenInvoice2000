@@ -4,23 +4,44 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 26-sep-2017, 23:59:37
-    Author     : davidjguru
-*/
-
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
     Created on : 20-sep-2017, 0:05:49
     Author     : davidjguru
 */
 
+@font-face {
+font-family: "Orange Juice";
+src: url('../fonts/orange-juice.ttf');
+}
+
+h1, strong {
+font-family: "Orange Juice";
+}
+
+#main-header{
+    
+        background: #F27435;
+	color: white;
+	height: 80px;
+    
+    
+}
+
+#main-footer{
+    
+        background: #3B2D38;
+	color: white;
+	height: 80px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center
+    
+    
+}
 #frmLogin { 
 	padding: 20px 60px;
-	background: #B6E0FF;
+	background: #CFBE27;
 	color: #555;
 	display: inline-block;
 	border-radius: 4px; 
@@ -67,8 +88,16 @@ and open the template in the editor.
 	border: #A3C3E7 1px solid;
 	border-radius: 4px; 
 }
+
+.form-text{
+    
+       text-transform: uppercase;
+    
+    
+    
+}
 .form-submit-button {
-	background: #65C370;
+	background: #3B2D38;
 	border: 0;
 	padding: 8px 20px;
 	border-radius: 4px;
@@ -100,7 +129,7 @@ and open the template in the editor.
 }
 
 body {
-	  background-color: #689F63;
+	  background-color: #BCBDAC;
 	}
         
         #head{

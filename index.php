@@ -107,19 +107,33 @@ elseif (isset ($_SESSION["language"])) {
         <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
 </head>
 <body>
+    <header id="main-header">
+		
+		
+ 
+		<nav>
+			<ul>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Acerca de</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</nav>
+ 
+	</header>
 <div>
 <div style="display:block;margin:0px auto;">
+    <h1>Welcome to OpenInvoice2000</h1>
     
 <?php if(empty($_SESSION["user_id"])) { ?>
     <form action="index.php" method="post" id="frmLogin">
         <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
         <div class="lang-message"><?php echo LANGMESSAGE; ?></div>
 	<div class="field-group">
-		<div id="user"><label for="login"><?php echo USER;?></label></div>
+		<div class="form-text" id="user"><label for="login"><?php echo USER;?></label></div>
 		<div><input name="user_name" type="text" class="input-field"></div>
 	</div>
 	<div class="field-group">
-		<div id="password"><label for="password"><?php echo PASSWORD;?></label></div>
+		<div class="form-text" id="password"><label for="password"><?php echo PASSWORD;?></label></div>
 		<div><input name="password" type="password" class="input-field"> </div>
 	</div>
 	<div class="field-group">
@@ -176,4 +190,10 @@ elseif (isset ($_SESSION["language"])) {
 </div>
 </div>
 <?php } ?>
+    
+<footer id="main-footer">
+  <p>OpenInvoice2000 created by: David Rodríguez, @davidjguru</p>
+  <p>Contact information: <a href="mailto:davidjguru@gmail.com">
+ davidjguru@gmail.com</a>.</p>
+</footer>
 </body></html>
