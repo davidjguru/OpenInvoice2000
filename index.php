@@ -109,6 +109,7 @@ elseif (isset ($_SESSION["language"])) {
 <body>
 <div>
 <div style="display:block;margin:0px auto;">
+    
 <?php if(empty($_SESSION["user_id"])) { ?>
     <form action="index.php" method="post" id="frmLogin">
         <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
@@ -122,13 +123,11 @@ elseif (isset ($_SESSION["language"])) {
 		<div><input name="password" type="password" class="input-field"> </div>
 	</div>
 	<div class="field-group">
-		<div><input type="submit" name="login" value="Login" class="form-submit-button"></span></div>
+		<div><input type="submit" name="login" value="Login" class="form-submit-button"> </span></div>
 	</div>       
 </form>
 <?php 
 } else { 
-//$result = mysqlI_query($conn,"SELECT * FROM users WHERE userid='" . $_SESSION["user_id"] . "'");
-//$row  = mysqli_fetch_array($result);
 ?>
 <form action="index.php" method="post" id="frmLogout">
 <div class="member-dashboard"> 
@@ -155,15 +154,25 @@ elseif (isset ($_SESSION["language"])) {
 </form>
     
     <h1><?php echo ACTIONSMENU; ?></h1>
-    <div id="actionsmenu">
-        
-        <ul>
-            <li><a href="action1.php"><?php echo ACTION1; ?></a></li>
-            <li><a href="action2.php"><?php echo ACTION2; ?></a></li>
-            <li><a href="action3.php"><?php echo ACTION3; ?></a></li>
-            <li><a href="action4.php"><?php echo ACTION4; ?></a></li>
-        </ul>
-</div>
+    
+    <form action="action1.php" method="post" id="actionsmenu">
+        <div class="field-group">
+                <div><button type="submit" form="actionsmenu" name="unit" value="Unit"><?php echo ACTION1; ?></button></div>
+	</div>   
+	<div class="field-group">
+                <div><button type="submit" form="actionsmenu" name="invoice" value="Invoice"><?php echo ACTION2; ?></button></div>
+
+	</div>   
+        <div class="field-group">
+                <div><button type="submit" form="actionsmenu" name="client" value="Client"><?php echo ACTION3; ?></button></div>
+
+	</div>   
+	<div class="field-group">
+                <div><button type="submit" form="actionsmenu" name="user" value="User"><?php echo ACTION4; ?></button></div>
+
+	</div>       
+    </form>
+    
 </div>
 </div>
 <?php } ?>
