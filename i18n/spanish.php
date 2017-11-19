@@ -27,11 +27,33 @@ define ("ACTION3", "Crear un nuevo cliente");
 define ("ACTION4", "Crear un nuevo usuario");
 
 // Menú de creación de unidades de negocio
-define ("WELCOMEBUSINNESSUNIT", "Bienvenido, aquí podrás nuevas unidades de negocio para tus facturas:");
+define ("WELCOMEBUSINNESSUNIT", "Bienvenido, aquí podrás nuevas unidades de negocio para tus facturas.");
 define ("FIRSTNAMEUNIT", "Nombre: ");
 define ("LASTNAMEUNIT", "Apellidos: ");
 define ("FISCALNUMBERUNIT", "Número de identificación fiscal: ");
 define ("ADRESSUNIT", "Dirección: ");
+define ("CREATEUNIT", "Crear unidad");
+
+// Menú de creación de clientes
+define("WELCOMECLIENTS","Bienvenido, aquí puede crear un nuevo perfil de cliente.");
+define("FIRSTNAMECLIENT","Nombre usado para el cliente:");
+define("LASTNAMECLIENT","Apellido o razón social del cliente:");
+define("FISCALNUMBERCLIENT","Número de identificación fiscal del cliente:");
+define("ADRESSCLIENT","Dirección física del cliente:");
+define ("CREATECLIENT", "Crear Cliente");
+
+// Menú de creación de usuarios
+define("WELCOMEUSER","Bienvenido, aquí podrás crear un nuevo usuario.");
+define("LEVELUSER", "Selecciona el rol del nuevo usuario:");
+define("FIRSTNAMEUSER","Nombre del usuario:");
+define("LASTNAMEUSER","Apellido del usuario:");
+define("NICKUSER","Escribe un identificador para el usuario:");
+define("PASSWORDUSER", "Escribe una contraseña para el usuario:");
+define("LEVELUSER1", "Administrador");
+define("LEVELUSER2", "Director");
+define("LEVELUSER3", "Editor");
+define("LEVELUSER4", "Visitante");
+define ("CREATEUSER", "Crear nuevo usuario");
 
 // Acciones de formulario
 define("EMPTYFORM", "Lo siento pero el formulario fue enviado con campos vacíos");
