@@ -1,4 +1,6 @@
-![OpenInvoice2000](/images/openInvoice_base_600x400_title.png  "Welcome to OpenInvoice2000")
+<p align="center>
+<img width="600" height="400" src="https://raw.githubusercontent.com/davidjguru/OpenInvoice2000/master/images/openInvoice_base_600x400_title.png">
+</p>
 
 # OpenInvoice2000
 A little PHP-Based tool for build invoices 
