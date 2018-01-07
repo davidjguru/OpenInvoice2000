@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/OpenInvoice2000/README.md</file>
             <file>file:/var/www/html/OpenInvoice2000/styles/styles.css</file>
             <file>file:/var/www/html/OpenInvoice2000/index.php</file>
-            <file>file:/var/www/html/OpenInvoice2000/action2.php</file>
+            <file>file:/var/www/html/OpenInvoice2000/createinvoice.php</file>
+            <file>file:/var/www/html/OpenInvoice2000/src/classes/fpdf181/fpdf.php</file>
             <file>file:/var/www/html/OpenInvoice2000/processingUnits.php</file>
+            <file>file:/var/www/html/OpenInvoice2000/action2.php</file>
             <file>file:/var/www/html/OpenInvoice2000/i18n/english.php</file>
             <file>file:/var/www/html/OpenInvoice2000/i18n/spanish.php</file>
             <file>file:/var/www/html/OpenInvoice2000/action1.php</file>

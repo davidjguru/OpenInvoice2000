@@ -1,6 +1,16 @@
 <?php
 
+define("HOME", "Home");
+define("ABOUT", "Acerca de");
+define("CONTACT", "Contacto");
+
+// Footer menu
+define("AUTHOR", "OpenInvoice2000 creado por: David Rodríguez, @davidjguru");
+define("INFO", "Información de contacto");
+define("LICENSE", "Liberado bajo Creative-Commons CC-SA-NC");
+
 // Bienvenida y mensajes pre-login
+define("FIRSTSTRING", "Bienvenido o bienvenida a OpenInvoice2000");
 define ("LOGINERROR", "Nombre de usuario o contraseña no son válidos");
 define ("USER", "Usuario: ");
 define ("PASSWORD", "Contraseña:");

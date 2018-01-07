@@ -10,7 +10,7 @@ and open the template in the editor.
 
 @font-face {
 font-family: "Orange Juice";
-src: url('../fonts/orange-juice.ttf');
+src: url('../font/orange-juice.ttf');
 }
 
 h1, strong {
@@ -26,11 +26,50 @@ font-family: "Orange Juice";
     
 }
 
+#welcomebox {
+    position: absolute;
+    left: 525px;
+    top: 9px;
+}
+
+#buttons {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn {
+  background: #F27435;
+  background-image: -webkit-linear-gradient(top, #F27435, #1f1700);
+  background-image: -moz-linear-gradient(top, #F27435, #1f1700);
+  background-image: -ms-linear-gradient(top, #F27435, #1f1700);
+  background-image: -o-linear-gradient(top, #F27435, #1f1700);
+  background-image: linear-gradient(to bottom, #F27435, #1f1700);
+  -webkit-border-radius: 23;
+  -moz-border-radius: 23;
+  border-radius: 23px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 8px 20px 10px 20px;
+  border: solid #fffff1 1px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #feab3a;
+  text-decoration: none;
+}
+
+
+
+
 #main-footer{
     
         background: #3B2D38;
 	color: white;
-	height: 80px;
+	height: 100px;
         position: fixed;
         left: 0;
         bottom: 0;

@@ -15,6 +15,7 @@
 // Autoloader
 require_once("src/classes/Autoloader.php");
 
+
 // Opening session
 session_start();
 
@@ -37,7 +38,7 @@ if(!empty($_POST["login"])) {
 	$_SESSION["user_id"] = $row['userid'];
         $_SESSION["user"] = $row['user'];
 	} else {
-	$message = LOGINERROR;
+	$message = "error";
 	}
 }
 
@@ -112,21 +113,32 @@ elseif (isset ($_SESSION["language"])) {
 		
  
 		<nav>
-			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Acerca de</a></li>
-				<li><a href="#">Contacto</a></li>
-			</ul>
+                    <div id="buttons">
+                    <div>
+                        <a href="index.php"><button class="btn"><?php echo HOME; ?></button></a>
+                    </div>
+                    
+                    <div> 
+                        <a href="#"><button class="btn"><?php echo ABOUT; ?></button></a>
+                    </div>
+                    <div>
+                        <a href="#"><button class="btn"><?php echo CONTACT; ?></button></a>
+                    </div>
+                </div>
 		</nav>
  
+        
+        
+        <div id="welcomebox">
+    <h1><?php echo FIRSTSTRING; ?></h1>
+</div>
 	</header>
 <div>
-<div style="display:block;margin:0px auto;">
-    <h1>Welcome to OpenInvoice2000</h1>
+
     
 <?php if(empty($_SESSION["user_id"])) { ?>
     <form action="index.php" method="post" id="frmLogin">
-        <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
+        <div class="error-message"><?php if(isset($message) and $message !="") { echo LOGINERROR; } ?></div>
         <div class="lang-message"><?php echo LANGMESSAGE; ?></div>
 	<div class="field-group">
 		<div class="form-text" id="user"><label for="login"><?php echo USER;?></label></div>
@@ -192,8 +204,9 @@ elseif (isset ($_SESSION["language"])) {
 <?php } ?>
     
 <footer id="main-footer">
-  <p>OpenInvoice2000 created by: David Rodríguez, @davidjguru</p>
-  <p>Contact information: <a href="mailto:davidjguru@gmail.com">
+  <p><?php echo AUTHOR; ?></p>
+  <p> <?php echo INFO; ?><a href="mailto:davidjguru@gmail.com">
  davidjguru@gmail.com</a>.</p>
+ <p><?php echo LICENSE; ?></p>
 </footer>
 </body></html>

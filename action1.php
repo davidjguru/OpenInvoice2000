@@ -16,10 +16,11 @@ session_start();
 <body>
     
     <?php 
+    require 'fpdf.php';
     
     if(!empty($_POST["unit"])) { ?>
     <form action="processingUnits.php" method="post" id="frmBusinessUnit">
-        <legend><?php echo WELCOMEBUSINNESSUNIT; ?></legend>
+        <h2><?php echo WELCOMEBUSINNESSUNIT; ?></h2>
 	<div class="field-group">
 		<div id="firstnameUnit"><label for="firstnameUnit"><?php echo FIRSTNAMEUNIT;?></label></div>
 		<div><input name="firstnameUnit" type="text" class="input-field"></div>
@@ -48,6 +49,13 @@ session_start();
     }elseif (!empty ($_POST["invoice"])) {
         
         echo "Create new Invoice";
+        $pdf = new FPDF();
+        $pdf->AddPage();
+        $pdf->SetFont('Arial','B',16);
+        $pdf->Cell(40,10,'Hola, Mundo!');
+        // We have to clean the buffer
+        ob_get_clean();
+        $pdf->Output();
         
     }elseif (!empty ($_POST["client"])){?>
     
